@@ -186,6 +186,91 @@ Data availability starts from approximately 1988-2000 depending on the asset.
 
 5. **Higher Terminal Wealth**: Despite being more conservative, the strategy ended with 23% more wealth ($844 vs $684 from $100 initial investment).
 
+## Future Improvements
+
+### High-Impact
+
+#### 1. Extended Historical Data
+- Add CSV import support for ERN's Google Sheet data (1871+)
+- Currently limited to ~2000+ due to free API constraints
+- Longer history enables testing across more market cycles
+
+#### 2. Safe Withdrawal Rate (SWR) Analysis
+- Simulate retirement withdrawals over historical periods
+- Calculate failure rates at different withdrawal percentages
+- Identify worst decades for retirees
+- Core feature of the original ERN methodology
+
+#### 3. Alerts & Notifications
+- Email/SMS alerts when signals change significantly
+- Monthly summary reports
+- Push notifications for rebalancing triggers
+
+#### 4. Real (Inflation-Adjusted) Returns
+- Add CPI data from FRED
+- Calculate and display real returns alongside nominal
+- More accurate long-term performance assessment
+
+### Medium-Impact
+
+#### 5. Configurable Parameters
+Allow users to customize via the dashboard:
+- Lookback periods (currently fixed at 8/9/10 months)
+- Base allocation weights (currently 70/20/10)
+- Rebalancing threshold
+- Transaction cost assumptions
+
+#### 6. Additional Benchmarks
+- 60/40 portfolio
+- All-equity (100% S&P 500)
+- Risk parity
+- Other momentum variants
+
+#### 7. Rolling Period Analysis
+- Rolling 1/3/5/10 year returns
+- Probability of beating benchmark over different horizons
+- Decade-by-decade performance breakdown
+
+#### 8. Export Functionality
+- Download signals as CSV
+- Generate PDF reports
+- Export allocation history for tax purposes
+
+### Technical Improvements
+
+#### 9. Robustness
+- Add retry logic for API failures
+- Add data validation
+- Add logging for debugging
+- Handle market holidays/missing data better
+
+#### 10. Deployment Options
+- Docker container for easy deployment
+- Cloud hosting (Streamlit Cloud, AWS, etc.)
+- Scheduled daily data refresh via cron/GitHub Actions
+
+#### 11. REST API
+- Query current signals programmatically
+- Integrate with other tools/brokerages
+- Enable mobile app development
+
+### Analysis Enhancements
+
+#### 12. Additional Risk Metrics
+- Value at Risk (VaR)
+- Conditional VaR (CVaR)
+- Sortino ratio
+- Calmar ratio
+
+#### 13. Regime Analysis
+- Detect bull/bear market regimes
+- Show strategy performance by regime
+- Correlation with VIX
+
+#### 14. Factor Attribution
+- Decompose returns by market timing vs asset selection
+- Show contribution by asset class
+
 ## Disclaimer
 
 This is for educational purposes only. Past performance does not guarantee future results. Always do your own research before making investment decisions.
